@@ -1,4 +1,4 @@
-PROGRAM1	;LEI/FO-OAK-ROUTINE TO ILLUSTRATE JOURNAL CONTRIBUTION TO TECHNICAL JOURNAL ;10/16/11  13:50
+PROGRAM1	;LEI/FO-OAK-ROUTINE EXAMPLE TO TECHNICAL JOURNAL ;10/16/11  13:50
 	;;7.3;TOOLKIT;**to be determined**;
 	;
 	;  The code in this routine is intended to illustrate how to prepare a
