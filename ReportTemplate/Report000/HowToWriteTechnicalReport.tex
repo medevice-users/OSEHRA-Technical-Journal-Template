@@ -135,28 +135,46 @@ In this hypothetical example, we do a walk throught the source code of the
 contribution with the purpose of highlighting some of the key features in this
 source code piece.
 
-First we say something smart about the first five lines:
+First we say something smart about the first five lines. For example, point out
+the purpose of the code:
 
-\lstlistingwithnumber{1}{5}{PROGRAM1.m}
+\lstlistingwithnumber{1}{2}{PROGRAM1.m}
 
-That is followed by an explanation of why the next three lines are required:
+This could include the comments explaining what the code does
 
-\lstlistingwithnumber{6}{9}{PROGRAM1.m}
+\lstlistingwithnumber{4}{7}{PROGRAM1.m}
 
-and conclude with a commentary of the last lines:
+Then you could explain line by line what the program does, or simply focus on
+some of the remarkable lines of the code.
 
-\lstlistingwithnumber{10}{14}{PROGRAM1.m}
+Here we read a string from the command line:
+
+\lstlistingwithnumber{8}{8}{PROGRAM1.m}
+
+Then we write that string to the console:
+
+\lstlistingwithnumber{9}{9}{PROGRAM1.m}
+
+and conclude with a commentary of the last lines where we quit the program
+
+\lstlistingwithnumber{10}{10}{PROGRAM1.m}
 
 
+This is a ``Hello World'' type of example. Your code contributions will
+certainly have a much higher level of complexity, and therefore you should be
+free to use as much space as you consider necessary to share your insights on
+the code to your fellow developers. Remember, this is a Technical Report and
+therefore it is focused on sharing as much technical information as you can
+with your peers on how to use, and extend the code that you are contributing.
 
 \section{How to use the code}
 
 In this typical section we explain how a typical OSEHRA developer can take
-advantage of the contribution described in this technical report.
-
+advantage of the contribution described in this technical report. These would
+normally be instructions on how to run the code.
 
 \begin{verbatim}
-mumps  PROGRAM1.m
+D ^PROGRAM1
 \end{verbatim}
 
 
