@@ -5,7 +5,7 @@ set( CMAKE_RUNTIME_OUTPUT_DIRECTORY
   ${OSEHRA-Technical-Journal-Template}/bin
 )
 
-file(GLOB_RECURSE MUMPS_FILES "Source/*.m")
+file(GLOB_RECURSE MUMPS_FILES "Source/*.RO")
 
 add_subdirectory(Source)
 

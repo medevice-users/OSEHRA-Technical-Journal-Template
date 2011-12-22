@@ -33,7 +33,7 @@ colorlinks,linkcolor={blue},citecolor={blue},urlcolor={blue},
 }
 
 
-\title{How to Write an OSEHRA Technical Report}
+\title{Converter from Cache to GT.M}
 
 
 %
@@ -42,7 +42,7 @@ colorlinks,linkcolor={blue},citecolor={blue},urlcolor={blue},
 % submission process. Please replace the number "1" with
 % the actual handle number that you get assigned.
 %
-\newcommand{\OTJhandlerIDnumber}{2}
+\newcommand{\OTJhandlerIDnumber}{17}
 
 \lstset{frame = tb,
        framerule = 0.25pt,
@@ -66,7 +66,8 @@ colorlinks,linkcolor={blue},citecolor={blue},urlcolor={blue},
 
 \release{1.10}
 
-\author{OSHERA Agent}
+\author{Rick Spivey}
+\authoraddress{Department of Veterans Affairs}
 
 \begin{document}
 
@@ -103,104 +104,58 @@ colorlinks,linkcolor={blue},citecolor={blue},urlcolor={blue},
 
 \begin{abstract}
 \noindent
-This paper describes the basic guidelines for preparing technical
-reports to be contributed to the OSEHRA Technical Journal.
-
-\begin{center}
-\url{http://code.osehra.org/journal/}
-\end{center}
-
-The purpose of the Technical Journal is to foster innovation in the OSEHRA
-community and to drive this innovations towards a mature state, at which point
-it can be incorporated into the Open Source EHR software platform.
+This article describes a M Routine that can take other M routines from the
+Intersystems Cache environment and convert them to a format suitable for being
+used in GT.M.
 \end{abstract}
 
 \tableofcontents
 
 \section{Introduction}
-
-Technical reports for the OSEHRA Technical Journal are written by software
-developers and are intended for software developers. As such, they are required
-to include the source code of any components that is the subject of the report,
-and to include as well the unit tests and required data and parameters needed
-to run such tests.
-
-A successful OSEHRA Technical Report should be such that any reader can download
-the report and its acompanying materials and with minimal effort verify that the
-software works and produce useful results.
-
-\section{Code Walkthrough}
-
-In this hypothetical example, we do a walk throught the source code of the
-contribution with the purpose of highlighting some of the key features in this
-source code piece.
-
-First we say something smart about the first five lines. For example, point out
-the purpose of the code:
-
-\lstlistingwithnumber{1}{2}{PROGRAM1.m}
-
-This could include the comments explaining what the code does
-
-\lstlistingwithnumber{4}{7}{PROGRAM1.m}
-
-Then you could explain line by line what the program does, or simply focus on
-some of the remarkable lines of the code.
-
-Here we read a string from the command line:
-
-\lstlistingwithnumber{8}{8}{PROGRAM1.m}
-
-Then we write that string to the console:
-
-\lstlistingwithnumber{9}{9}{PROGRAM1.m}
-
-and conclude with a commentary of the last lines where we quit the program
-
-\lstlistingwithnumber{10}{10}{PROGRAM1.m}
-
-
-This is a ``Hello World'' type of example. Your code contributions will
-certainly have a much higher level of complexity, and therefore you should be
-free to use as much space as you consider necessary to share your insights on
-the code to your fellow developers. Remember, this is a Technical Report and
-therefore it is focused on sharing as much technical information as you can
-with your peers on how to use, and extend the code that you are contributing.
+There are certain differences between the format of M routines that are used in
+Intersystems Cache and GT.M. The M routine in this contribution is a helpful
+tool for converting M routines from an Intersystems Cache environment to a
+format that can be used in GT.M.
 
 \section{How to use the code}
 
-In this typical section we explain how a typical OSEHRA developer can take
-advantage of the contribution described in this technical report. These would
-normally be instructions on how to run the code.
+\subsection{Platform}
 
-\begin{verbatim}
-D ^PROGRAM1
-\end{verbatim}
+This routine was written for Cache that runs on a Windows PC.
 
+\subsection{Running the code}
 
-\section{Preparation}
-
-A typical contribution to the OSEHRA Technical Journal should include the following elements
+In order to run this code, please execute the following steps:
 
 \begin{itemize}
-\item PDF Document with a Technical Report
-\item PDF Document with the Primary Reviewer Checklist
-\item Source code of the contribution
-\item Unite Testing for the contributed source code
+\item Create a GTM folder in the root folder of the namespace that this routine runs in.
+\item Run LTUGTM to specify which routines to convert.
+\item Run ALL LTUGTM to have the utility convert all routines in the namespace from A to ZZZZZZZ.
 \end{itemize}
 
-During the process of uploading your contribution to the OSEHRA Technical
-Journal, you will be asked to upload each one of these items.
 
-More detailed instructions are available in the OSEHRA Web site at:
+\section{Source Code Repository}
 
-\url{http://www.osehra.org/document/code-contributions-and-review-procedures}
+The code is being hosted in the following Git repository:
+
+\begin{itemize}
+\item \url{https://github.com/OSEHR/CacheToGTM}
+\end{itemize}
 
 
-\section{Conclusions}
+\section{Portability Suggestions}
 
-In the final section we discuss potential improvements to the code, and what
-other uses it could have.
+This routine can probably be modified to run in a Cache VMS environment by
+asking the user for a directory to put the .m files into and replacing the
+literal "GTM/" with that variable.
+
+
+\section{Source Code}
+
+Given that this is a very compact code base, we can list it here for your convenience.
+
+\lstlistingwithnumber{1}{71}{LTUGTM.RO}
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
