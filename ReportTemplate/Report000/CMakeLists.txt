@@ -1,4 +1,4 @@
-project(HowToWriteTechnicalReport)
+project(R1AC_PRINT_POSTCARD_3.0_Report)
 
 
 #
@@ -8,7 +8,7 @@ project(HowToWriteTechnicalReport)
 #
 file(
   COPY  ${LATEX_FILES}
-  DESTINATION ${HowToWriteTechnicalReport_BINARY_DIR}
+  DESTINATION ${R1AC_PRINT_POSTCARD_3.0_Report_BINARY_DIR}
   )
 
 
@@ -20,11 +20,11 @@ file(
 #
 file(
   COPY  ${MUMPS_FILES}
-  DESTINATION ${HowToWriteTechnicalReport_BINARY_DIR}
+  DESTINATION ${R1AC_PRINT_POSTCARD_3.0_Report_BINARY_DIR}
   )
 
 
-add_latex_document( HowToWriteTechnicalReport.tex
+add_latex_document( R1AC_PRINT_POSTCARD_3.0_Report.tex
   IMAGE_DIRS ../Art
   DEFAULT_PDF
   )
