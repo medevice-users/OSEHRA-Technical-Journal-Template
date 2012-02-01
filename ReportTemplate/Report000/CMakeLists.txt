@@ -1,4 +1,4 @@
-project(HowToWriteTechnicalReport)
+project(CPRS-Technical-Article)
 
 
 #
@@ -8,7 +8,7 @@ project(HowToWriteTechnicalReport)
 #
 file(
   COPY  ${LATEX_FILES}
-  DESTINATION ${HowToWriteTechnicalReport_BINARY_DIR}
+  DESTINATION ${CPRS-Technical-Article_BINARY_DIR}
   )
 
 
@@ -20,11 +20,11 @@ file(
 #
 file(
   COPY  ${MUMPS_FILES}
-  DESTINATION ${HowToWriteTechnicalReport_BINARY_DIR}
+  DESTINATION ${CPRS-Technical-Article_BINARY_DIR}
   )
 
 
-add_latex_document( HowToWriteTechnicalReport.tex
+add_latex_document( CPRS-Technical-Article.tex
   IMAGE_DIRS ../Art
   DEFAULT_PDF
   )

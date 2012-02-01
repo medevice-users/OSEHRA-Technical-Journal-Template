@@ -1,0 +1,166 @@
+\documentclass{OSEHRAArticle}
+
+\usepackage[dvips]{graphicx}
+\usepackage{color}
+\usepackage{listings}
+\usepackage{verbatim}
+\usepackage{textcomp}
+
+\definecolor{listcomment}{rgb}{0.0,0.5,0.0}
+\definecolor{listkeyword}{rgb}{0.0,0.0,0.5}
+\definecolor{listnumbers}{gray}{0.65}
+\definecolor{listlightgray}{gray}{0.955}
+\definecolor{listwhite}{gray}{1.0}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%  hyperref should be the last package to be loaded.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[dvips,
+bookmarks,
+bookmarksopen,
+backref,
+colorlinks,linkcolor={blue},citecolor={blue},urlcolor={blue},
+]{hyperref}
+
+
+\newcommand{\lstlistingwithnumber}[3]{
+\begin{center}
+\lstinputlisting[linerange={#1-#2},firstnumber=#1,numbers=left]{#3}
+\end{center}
+}
+
+
+\title{CPRS}
+
+
+%
+% NOTE: This is the last number of the "handle" URL that
+% The OSEHRA Journal assigns to your paper as part of the
+% submission process. Please replace the number "1" with
+% the actual handle number that you get assigned.
+%
+\newcommand{\OTJhandlerIDnumber}{2}
+
+\lstset{frame = tb,
+       framerule = 0.25pt,
+       float,
+       fontadjust,
+       backgroundcolor={\color{listlightgray}},
+       basicstyle = {\ttfamily\footnotesize},
+       keywordstyle = {\ttfamily\color{listkeyword}\textbf},
+       identifierstyle = {\ttfamily},
+       commentstyle = {\ttfamily\color{listcomment}\textit},
+       stringstyle = {\ttfamily},
+       showstringspaces = false,
+       showtabs = false,
+       numbers = left,
+       numbersep = 6pt,
+       numberstyle={\ttfamily\color{listnumbers}},
+       tabsize = 2,
+       language=[ANSI]C++,
+       floatplacement=!h
+       }
+
+\release{1.10}
+
+\author{}
+
+\begin{document}
+
+
+%
+% Add hyperlink to the web location and license of the paper.
+% The argument of this command is the handler identifier given
+% by the OSEHRA Journal to this paper.
+%
+\OTJhandlefooter{\OTJhandlerIDnumber}
+
+
+\ifpdf
+\else
+   %
+   % Commands for including Graphics when using latex
+   %
+   \DeclareGraphicsExtensions{.eps,.jpg,.gif,.tiff,.bmp,.png}
+   \DeclareGraphicsRule{.jpg}{eps}{.jpg.bb}{`convert #1 eps:-}
+   \DeclareGraphicsRule{.gif}{eps}{.gif.bb}{`convert #1 eps:-}
+   \DeclareGraphicsRule{.tiff}{eps}{.tiff.bb}{`convert #1 eps:-}
+   \DeclareGraphicsRule{.bmp}{eps}{.bmp.bb}{`convert #1 eps:-}
+   \DeclareGraphicsRule{.png}{eps}{.png.bb}{`convert #1 eps:-}
+\fi
+
+
+\maketitle
+
+
+\ifhtml
+\chapter*{Front Matter\label{front}}
+\fi
+
+
+\begin{abstract}
+\noindent
+This paper presents the Computerized Patient Record System (CPRS), that
+provides a single interface for health care providers to review and update a
+patient’s medical record, and to place orders, including medications, special
+procedures, x-rays, patient care nursing orders, diets, and laboratory tests.
+CPRS is flexible enough to be implemented in a wide variety of settings for a
+broad spectrum of health care workers, and provides a consistent, event-driven,
+Windows-style interface.
+\end{abstract}
+
+\tableofcontents
+
+\section{Introduction}
+
+The Computerized Patient Record System (CPRS) is a graphical user interface
+intended for clinicians in 1997. CPRS provides a single interface for health
+care providers to review and update a patient’s medical record, and to place
+orders, including medications, special procedures, x-rays, patient care nursing
+orders, diets, and laboratory tests. CPRS is flexible enough to be implemented
+in a wide variety of settings for a broad spectrum of health care workers, and
+provides a consistent, event-driven, Windows-style interface.
+
+CPRS organizes and presents all relevant data on a patient in a way that
+directly supports clinical decision-making. The comprehensive cover sheet
+displays timely, patient-centric information, including active problems,
+allergies, current medications, recent laboratory results, vital signs,
+hospitalization, and outpatient clinic history. This information is displayed
+immediately when a patient is selected, and provides an accurate overview of
+the patient’s current status before clinical interventions are ordered. CPRS
+capabilities include:
+
+A Real-Time Order Checking System that alerts clinicians during the ordering
+session that a possible problem could exist if the order is processed; A
+Notification System that immediately alerts clinicians about clinically
+significant events;
+
+A Patient Posting System, displayed on every CPRS screen, that alerts
+clinicians to issues related specifically to the patient, including crisis
+notes, warning, adverse reactions, and advance directives; The Clinical
+Reminder System, which allows caregivers to track and improve preventive health
+care for patients and ensure timely clinical interventions are initiated; and
+
+
+Remote Data View functionality that allows clinicians to view a patient’s
+medical history from other VA facilities to ensure the clinician has access to
+all clinically relevant data available at VA facilities.
+
+\section{Conclusions}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%  Insert the bibliography using BibTeX
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\bibliographystyle{plain}
+\bibliography{OSEHRAJournal}
+
+
+\end{document}
